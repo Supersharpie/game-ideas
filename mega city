@@ -1,0 +1,52 @@
+# The Hollow Citadel — Master Metropolitan Specification
+The Hollow Citadel is an inline **$1.2\text{ km} \times 1.2\text{ km}$** circular/octagonal mega-city constructed inside the ancient impact crater where the continent’s lowlands collide with the vertical granite roots of the Impassable Mountain Range. Built directly upon the untouched, cream-white cyclopean masonry of the vanished Ancients, the city functions as the single economic and social anchor for the entire realm.
+---
+## 1. Technical Framework & Shard Density
+* **Hard Shard Cap:** **200 CCU / shard** (canonical lock). Delivers 20–30 players (~40–60% social dwell time) inside the Citadel core at any time, maintaining visual density without enterprise server overhead.
+* **Server Process Split:** The Citadel runs on a dedicated **City Server** process (10 Hz, I/O-focused) isolated from the 30 Hz zero-GC wilderness combat shards.
+* **Master Rigs & GPU Instancing:** All player avatars run on two master human base skeletons (Male/Female) supporting modular mesh swaps and GPU animation instancing (~200× batch target) to guarantee 60 FPS in dense market streets.
+* **Interest Management:** Hard **40 m** network cull; 0–20 m full-rate animation tier, 20–40 m half-rate throttled tier.
+---
+## 2. Visual Identity: Frontier Boomtown on Ancient Foundations
+* **The Ancient Substrate:** Seamless, cream-white limestone blocks, fluted precursor arches, and unweathered starlight conduits that catch the morning sun with subtle prismatic reflections.
+* **The Mortal Boomtown Layer:** Rich, oiled cedar timbers, river-cobble footings, steep copper-trimmed gables, multi-tiered balconies, and snapping red and gold heraldic pennants.
+* **The Living Basin:** The crater floor beneath the city’s bridges and arches is carpeted in wild clover, blooming mountain flora, and clear streams fed by high mountain aqueducts.
+* **The Northern Mountain Sluice:** Foaming glacial melt and starlight runoff plunge down the sheer granite face behind Sector 1. Pristine Ancient aqueducts capture the torrent at high elevation, distributing it through distillery cooling jackets, lapidary cutting sluices, and timber waterwheels before releasing it into the lowlands.
+---
+## 3. The 4-Tier Concentric Hierarchy
+```text
+[TIER 4: Outer Fortress Wall & Transit Ring (+15% Speed)]
+   └── [TIER 3: Industrial Craft Wards & Sortie Depots (5–6 Plots/Ward)]
+         └── [TIER 2: Inner Social Ring & Prestige Runway (+10% Speed | 6–7 Food Plots)]
+               └── [TIER 1: The Inner Keep Sanctum (Monumental / Empty Throne / Apex Forge)]
+```
+### Tier 1: The Inner Keep (The Sanctum)
+* **The 30 m Central Landmark Spire:** Soars above the city center, visible from every outer gate to provide continuous spatial orientation.
+* **The Empty Throne & Apex Forge:** Positioned directly over the crater's central void. A non-commercial, sacred space reserved for world announcements, company ceremonies, and ascension milestones.
+* **The Mantle Gate:** The sealed, monolithic stone conduit descending into the suspended **Hollow Seat** dais hovering weightlessly above the blooming crater floor.
+* **Policy:** Zero vendor stalls, commercial trade, or player storefront clutter allowed.
+### Tier 2: The Inner Social Ring (The Commons & Hearth Ring)
+* **The Core Hub:** Replaces traditional dead moat architecture with a wide, paved circular boulevard uniting all eight radial avenues.
+* **The Atmosphere:** Scented with split cedar, woodsmoke, roasting mutton, sourdough, and fresh ale. Houses coaching inns, alehouses, dice tables, and central Guild notice boards.
+* **The Provisioner Heart:** The entire **Cooking & Provisioner** profession is anchored here. Master smokehouses, craft bakeries, cider presses, and brew-taps occupy 6–7 dedicated plots directly along this circuit.
+* **The 24 m Prestige Runway:** Paved in pale granite flagstones with polished brass runic inlays, conferring a **+10% movement speed buff** to draw high-level players through the central social strip.
+### Tier 3: The Industrial Craft Wards
+* **The Working Mid-Ground:** The central and outer zones of Sectors 2 through 8.
+* **Ward Engines:** Houses each trade's primary public crafting mechanisms (public trip-hammer pits, wind-driven pedal-looms, waterwheel lathes, copper hydro-stills, scraping yards) alongside the 5–6 master artisan storefront plots.
+### Tier 4: The Outer Fortress Wall & Sortie Ring
+* **Perimeter Boulevard:** A wide arterial road skirting the base of the outer battlements, granting a **+15% movement speed buff** to allow harvesters and hunters to transit between the 8 perimeter gates quickly.
+---
+## 4. Traversal Rules: The "Show-Off" Mandate
+* **Physical Traversal Only:** Fast travel, ward-to-ward teleports, trams, and canal ferries are strictly prohibited within the Citadel walls. Cross-city traversal takes 2 to 5 minutes on foot (baseline run speed: 6.5 m/s).
+* **Mount Ban:** Mounts and flying beasts cannot be summoned or ridden inside the Citadel boundary; they must be stabled outside the gates.
+* **Visual Contrast:** High-level gear glows, weapon silhouettes, and crafted armor are forced to interact visually with baseline players walking the avenues.
+---
+## 5. The 8-Sector Architecture
+```text
+                                [NORTH GATE: ASCENSION BARBICAN]
+                                   (To Unknowns Zone ? ──► Zone 9)
+                                                  │
+                 ┌────────────────────────────────┴────────────────────────────────┐
+                 │                                                                 │
+    [NW GATE]    │          [SECTOR 1: NORTH]            [SECTOR 2: NE]            │   [NE GATE]
+  (To Zone 6-7)  │       THE GUILD CITADEL & ARCHIVES   VERDANT ARCHIPELAGO        │ (To Zone 5)
